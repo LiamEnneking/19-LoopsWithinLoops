@@ -3,8 +3,8 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Liam.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -44,7 +44,7 @@ def rectangle_of_stars(r, c):
     Preconditions:  r and c are non-negative integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     #  *** Unless your instructor directs you otherwise,
@@ -62,6 +62,12 @@ def rectangle_of_stars(r, c):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    for i in range(r):
+        x = ''
+        for k in range(c):
+            if c > k:
+                x = x + '*'
+        print(x)
 
 def run_test_triangle_of_stars():
     """ Tests the    triangle_of_stars    function. """
@@ -98,7 +104,7 @@ def triangle_of_stars(r):
     Precondition:  r is a non-negative integer.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     #  *** Unless your instructor directs you otherwise,
@@ -117,6 +123,11 @@ def triangle_of_stars(r):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    x = ''
+    for i in range(r):
+        for k in range(1):
+            x = x + '*'
+        print(x)
 
 def run_test_decreasing_exclamation_marks():
     """ Tests the    decreasing_exclamation_marks    function. """
@@ -150,7 +161,7 @@ def decreasing_exclamation_marks(m, n):
     Precondition:  m and n are positive integers with m >= n.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -159,6 +170,13 @@ def decreasing_exclamation_marks(m, n):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    v = m + 1
+    for i in range(m, n-1, -1):
+        x = ''
+        v = v - 1
+        for k in range(v):
+            x = x + '!'
+        print(x)
 
 def run_test_alternating_brackets():
     """ Tests the    alternating_brackets    function. """
@@ -192,7 +210,7 @@ def alternating_brackets(m, n):
     Precondition:  m and n are positive integers with m >= n.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -201,6 +219,15 @@ def alternating_brackets(m, n):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    v = m + 1
+    for i in range(m, n-1, -1):
+        x = ''
+        v = v - 1
+        for k in range(v//2):
+            x = x + '[]'
+        if v % 2 == 1:
+            x = x + '['
+        print(x)
 
 def run_test_triangle_same_number_in_each_row():
     """ Tests the    triangle_same_number_in_each_row    function. """
@@ -235,7 +262,7 @@ def triangle_same_number_in_each_row(r):
     Precondition:  r is a non-negative integer.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -244,6 +271,11 @@ def triangle_same_number_in_each_row(r):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    for i in range(r+1):
+        x = ''
+        for k in range(i):
+            x = x + str(i)
+        print(x)
 
 def run_test_triangle_all_numbers_in_each_row():
     """ Tests the    triangle_all_numbers_in_each_row    function. """
@@ -278,7 +310,7 @@ def triangle_all_numbers_in_each_row(r):
     Precondition:  r is a non-negative integer.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -287,6 +319,11 @@ def triangle_all_numbers_in_each_row(r):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    for i in range(r+1):
+        x = ''
+        for k in range(i):
+            x = x + str(k+1)
+        print(x)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
